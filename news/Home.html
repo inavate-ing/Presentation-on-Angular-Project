@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Presentation</title>
+
+    <link rel="stylesheet" href="Sidebar.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>The <br>Architecture</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+
+
+            <li>
+                <a (click)="changeBranch()">Home</a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                   class="dropdown-toggle" style="color: white" onMouseOver="this.style.color='#A8403D'"
+                   onMouseOut="this.style.color='#FFF'">Categories</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a (click)="changeBranch('CSE')">CSE</a>
+                    </li>
+                    <li>
+                        <a (click)="changeBranch('ECE')">ECE</a>
+                    </li>
+                    <li>
+                        <a (click)="changeBranch('ME')">ME</a>
+                    </li>
+                    <li>
+                        <a (click)="changeBranch('Civil')">Civil</a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="adminlogin.html" class="download" style="color: #A8403D">Admin Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background: #F5F5F5">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="navbar-brand" href="#"><img src="Untitled-1.png" alt="" height="66"
+                                                                  width="165"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h2>The Navigation Bars</h2>
+
+        <p>We Used A Side Navigation Bar that was built using Bootstrap and CSS, with a theme of
+            <font color="#A8403D">Red/Maroon</font> color inspired by
+            <font color="#A8403D">The NorthCap University Logo.</font>
+            It features a collapsible Dropdown with a transition effect that pushes down other content.
+        </p>
+
+        <p>The Side Nav itself is also collapsible and is controlled by a FontAwesome Dynamic JS Icon that transitions
+            between the infamous hamburger and a close button which appears on top navbar. The top navbar floats the
+            official logo for our <font color="#A8403D">Project Management System.</font> made using Photoshop.</p>
+
+        <div class="line"></div>
+
+        <h2>The Branch Change Function</h2>
+
+        <p>
+
+            <img src="Code/Screen%20Shot%202019-05-14%20at%201.37.17%20AM.png" alt="">&nbsp;
+            <img src="Code/Screen%20Shot%202019-05-14%20at%201.42.53%20AM.png" alt="">
+
+        </p>
+
+        <div class="line"></div>
+
+        <h2>Project Fetch</h2>
+        <p>
+            When there are no project available, the following is printed.<br>
+            <img src="Code/Screen%20Shot%202019-05-14%20at%203.24.07%20AM.png" alt=""><br><br>
+
+            else, the following lines of code is ran. <br>
+            <img src="Code/Screen%20Shot%202019-05-14%20at%203.29.56%20AM.png" alt=""><br><br>
+            <img src="Code/Screen%20Shot%202019-05-14%20at%203.32.13%20AM.png" alt=""><br><br>
+            <img src="Code/Screen%20Shot%202019-05-14%20at%203.32.25%20AM.png" alt="">
+
+        </p>
+
+
+        <div class="line"></div>
+
+        <h2>Admin Routing</h2>
+        <p>
+            Clicking on Admin Routing Button, the angular routes us to admin page.
+        </p>
+        <img src="Code/Screen%20Shot%202019-05-14%20at%201.52.34%20AM.png" alt="">
+
+
+        <div class="line"></div>
+
+        <h2>Admin Authentication</h2>
+        <p>
+            After the angular routes us to out admin page, authentication is done through auth.service.ts and
+            auth.guard.ts which only authenticates the correct password which is secret (not so much!).
+        </p>
+        <img src="Code/Screen%20Shot%202019-05-14%20at%2012.31.33%20PM.png" alt="">
+        <img src="Code/Screen%20Shot%202019-05-14%20at%2012.34.17%20PM.png" alt="">
+
+
+    </div>
+
+</div>
+
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            $(this).toggleClass('active');
+        });
+    });
+</script>
+
+</html>

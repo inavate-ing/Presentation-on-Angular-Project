@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Presentation</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css'>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+        html, body, .page {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        * {
+            font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+        }
+
+        .page {
+            position: absolute;
+        }
+
+        #p1 {
+            left: 0;
+        }
+
+        #p2, #p3, #p4, #p5, #p6, #p7 {
+            left: 200%;
+        }
+
+        #p1 {
+            background: darkslateblue;
+        }
+
+        #p2 {
+            background: tomato;
+        }
+
+        #p3 {
+            background: gold;
+        }
+
+        #p4 {
+            background: darkorange;
+        }
+
+        #p5 {
+            background: rebeccapurple;
+        }
+
+        #p6 {
+            background: #DD0A30;
+        }
+
+        #p7 {
+            background: darkolivegreen;
+        }
+
+
+        #t2:target #p2,
+        #t3:target #p3,
+        #t4:target #p4,
+        #t5:target #p5,
+        #t6:target #p6,
+        #t7:target #p7 {
+            transform: translateX(-190%);
+            -webkit-transform: translateX(-190%);
+            -moz-transform: translateX(-190%);
+            -o-transform: translateX(-190%);
+            transition-delay: .4s !important;
+        }
+
+        #t2:target #p1,
+        #t3:target #p1,
+        #t4:target #p1,
+        #t5:target #p1,
+        #t6:target #p1,
+        #t7:target #p1 {
+            background: black;
+        }
+
+        #t2:target #p1 .icon,
+        #t3:target #p1 .icon,
+        #t4:target #p1 .icon,
+        #t5:target #p1 .icon,
+        #t6:target #p1 .icon,
+        #t7:target #p1 .icon {
+            -webkit-filter: blur(3px);
+        }
+
+        .icon {
+            color: #fff;
+            font-size: 32px;
+            display: block;
+        }
+
+        ul .icon:hover {
+            opacity: 0.5;
+        }
+
+        .page .icon .title {
+            line-height: 2;
+        }
+
+        #t2:target ul .icon,
+        #t3:target ul .icon,
+        #t4:target ul .icon,
+        #t5:target ul .icon,
+        #t6:target ul .icon,
+        #t7:target ul .icon {
+            transform: scale(.6);
+            -webkit-transform: scale(.6);
+            -moz-transform: scale(.6);
+            -o-transform: scale(.6);
+            transition-delay: .25s;
+        }
+
+        #t2:target #dos,
+        #t3:target #tres,
+        #t4:target #cuatro,
+        #t5:target #cinco,
+        #t6:target #seis,
+        #t7:target #siete {
+            transform: scale(1.2) !important;
+            -webkit-transform: scale(1.2) !important;
+            -moz-transform: scale(1.2) !important;
+            -o-transform: scale(1.2) !important;
+        }
+
+        ul {
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            margin-top: 200px;
+            /*height: 0px;*/
+            width: 10%;
+            padding: 0;
+            text-align: center;
+        }
+
+        #menu .icon {
+            margin: 30px 0;
+            transition: all .5s ease-out !important;
+            -webkit-transition: all .5s ease-out;
+            -moz-transition: all .5s ease-out;
+            -o-transition: all .5s ease-out;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .title, .hint {
+            display: block;
+        }
+
+        .title {
+            font-size: 48px;
+        }
+
+        .hint {
+            font-size: 19px;
+        }
+
+        #p4 .hint {
+            display: inherit !important;
+        }
+
+        .hint a {
+            color: yellow;
+            transition: all 250ms ease-out;
+            -webkit-transition: all 250ms ease-out;
+            -moz-transition: all 250ms ease-out;
+            -o-transition: all 250ms ease-out;
+        }
+
+        .hint a:hover {
+            color: #FFF;
+        }
+
+
+        .page .icon {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 10%;
+            left: 0;
+            width: 270px;
+            height: 170px;
+            margin: auto;
+            text-align: center;
+            font-size: 80px;
+            line-height: 1.3;
+            transform: translateX(360%);
+            transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+
+        }
+
+        .page#p1 .icon {
+            /*height: 220px;*/
+        }
+
+        .page#p1 .icon {
+            transform: translateX(10%) !important;
+        }
+
+        #t2:target .page#p2 .icon,
+        #t3:target .page#p3 .icon,
+        #t4:target .page#p4 .icon,
+        #t5:target .page#p5 .icon,
+        #t6:target .page#p6 .icon,
+        #t7:target .page#p7 .icon {
+            transform: translateX(0) !important;
+            -webkit-transform: translateX(0) !important;
+            -moz-transform: translateX(0) !important;
+            -o-transform: translateX(0) !important;
+            transition-delay: 1s;
+        }
+
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="ct" id="t1">
+    <div class="ct" id="t2">
+        <div class="ct" id="t3">
+            <div class="ct" id="t4">
+                <div class="ct" id="t5">
+                    <div class="ct" id="t6">
+                        <div class="ct" id="t7">
+                            <ul id="menu">
+                                <a href="#t1">
+                                    <li class="icon fas fa-file" id="uno"></li>
+                                </a>
+                                <a href="#t2">
+                                    <li class="icon fa fa-mobile" id="dos"></li>
+                                </a>
+                                <a href="#t3">
+                                    <li class="fas fa-user" id="tres" style="color: white"></li>
+                                </a>
+                                <a href="#t4">
+                                    <li class="icon fas fa-database" id="cuatro"></li>
+                                </a>
+                                <a href="#t5">
+                                    <li class="icon fab fa-node-js" id="cinco"></li>
+                                </a>
+                                <a href="#t6">
+                                    <li class="icon fab fa-angular" id="seis"></li>
+                                </a>
+                                <a href="#t7">
+                                    <li class="icon fab fa-microsoft" id="siete"></li>
+                                </a>
+
+                            </ul>
+                            <div class="page" id="p1">
+                                <section class="icon fa fa-file"><span class="title">Single Page</span>
+                                    <span class="hint">The whole website is made upon a single web page (index.html).</span>
+                                </section>
+                            </div>
+                            <div class="page" id="p2">
+
+                                <section class="icon fa fa-mobile">
+                                    <span class="title">Responsive</span>
+                                    <span class="hint">The whole app is clearly responsive</span>
+                                </section>
+
+                            </div>
+                            <div class="page" id="p3">
+                                <section class="icon fa fa-user">
+                                    <span class="title">UI</span>
+                                    <span class="hint">The UI is simple to use and User Friendly.</span>
+                                </section>
+
+                            </div>
+                            <div class="page" id="p4">
+                                <section class="icon fas fa-database">
+                                    <span class="title">M-V-C</span>
+                                    <span class="hint">The whole app is based on M-V-C model.</span>
+                            </div>
+                            <div class="page" id="p5">
+                                <section class="icon fab fa-node-js">
+                                    <span class="title">JSON</span>
+                                    <span class="hint">Data is hosted using a local JSON server.</span>
+                                </section>
+                            </div>
+                            <div class="page" id="p6">
+                                <section class="icon fab fa-angular">
+                                    <span class="title">Angular</span>
+                                    <span class="hint">The app is made using Angular 7 and TypeScript.</span>
+                                </section>
+                            </div>
+                            <div class="page" id="p7">
+                                <section class="icon fab fa-windows">
+                                    <span class="title">VScode</span>
+                                    <span class="hint">The whole app was made using Microsoft VScode Version 1.33.1.</span>
+                                    <a href="index.html" target="_blank"><i class="fa fa-forward"
+                                                                            style="font-size: 35px;color: white"></i></a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>
